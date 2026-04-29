@@ -7,6 +7,18 @@ export default class HeroComponent extends LightningElement {
     @track heroSubtitle = 'Where comfort meets the ocean';
     @track heroImageUrl = BAYFRONT_HERO;
     @track error;
+    @track isHidden = false;
+
+    connectedCallback() {
+        if (window.location.pathname.includes('error') || 
+            window.location.pathname.includes('404') || 
+            window.location.pathname.includes('not-found') ||
+            window.location.pathname.includes('login') ||
+            window.location.pathname.includes('signup') ||
+            window.location.pathname.includes('SelfRegister')) {
+            this.isHidden = true;
+        }
+    }
 
     @wire(getHomepageHero)
     wiredHeroData({ error, data }) {

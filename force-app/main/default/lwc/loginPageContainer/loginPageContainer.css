@@ -1,0 +1,61 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.login-page-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0a0e17;
+    z-index: 9999;
+    box-sizing: border-box;
+}
+
+.login-split-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #0a0e17;
+    overflow: hidden;
+}
+
+.branding-pane {
+    flex: 1;
+    background: radial-gradient(circle at center, #1a2332 0%, #06090f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    border-right: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.form-pane {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background: #0a0e17;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .login-split-container {
+        flex-direction: column;
+    }
+    .branding-pane {
+        flex: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        padding: 40px 20px;
+    }
+    .form-pane {
+        flex: 1;
+        width: 100%;
+        padding: 40px 20px;
+    }
+}

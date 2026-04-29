@@ -1,0 +1,56 @@
+<template>
+    <div class="signup-wrapper">
+        <div class="signup-card">
+            <div class="signup-header">
+                <h2>Create Account</h2>
+                <p>Join BayFront World today.</p>
+            </div>
+            
+            <template if:true={errorMessage}>
+                <div class="error-message">
+                    {errorMessage}
+                </div>
+            </template>
+
+            <template if:true={isSuccess}>
+                <div class="success-message">
+                    <h3>Registration Submitted!</h3>
+                    <p>Please check your email to confirm your registration and set your password.</p>
+                </div>
+            </template>
+
+            <template if:false={isSuccess}>
+                <form onsubmit={handleRegister}>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <input type="text" id="firstName" required value={firstName} oninput={handleFirstNameChange} class="form-input" placeholder=" " />
+                            <label for="firstName" class="form-label">First Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="lastName" required value={lastName} oninput={handleLastNameChange} class="form-input" placeholder=" " />
+                            <label for="lastName" class="form-label">Last Name</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" required value={email} oninput={handleEmailChange} class="form-input" placeholder=" " />
+                        <label for="email" class="form-label">Email Address</label>
+                    </div>
+
+                    <button type="submit" class="signup-btn" disabled={isLoading} aria-label="Sign Up">
+                        <template if:false={isLoading}>
+                            <span>Sign Up</span>
+                        </template>
+                        <template if:true={isLoading}>
+                            <span class="spinner"></span>
+                        </template>
+                    </button>
+                </form>
+                
+                <div class="signup-footer">
+                    <p>Already have an account? <a href={loginUrl} onclick={handleLoginClick}>Sign in</a></p>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

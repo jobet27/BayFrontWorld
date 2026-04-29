@@ -1,20 +1,21 @@
 <template>
-    <div class="logo-container">
-        <template if:true={logoUrl}>
-            <img src={logoUrl} alt={brandName} class="hero-logo-img" />
-        </template>
-        <template if:false={logoUrl}>
-            <!-- Fallback SVG Logo -->
-            <svg class="hero-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 5L90 25V75L50 95L10 75V25L50 5Z" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M50 20V80" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
-                <path d="M30 40H70" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
-                <path d="M35 60H65" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="50" cy="50" r="5" fill="#d4af37"/>
-            </svg>
-        </template>
-        <template if:true={showText}>
-            <h2 class="brand-title">{brandName}</h2>
-        </template>
-    </div>
+    <template if:false={isHidden}>
+        <div class="logo-container">
+            <template if:true={logoUrl}>
+                <img src={logoUrl} alt={brandName} class="hero-logo-img" />
+            </template>
+            <template if:false={logoUrl}>
+                <svg class="hero-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5L90 25V75L50 95L10 75V25L50 5Z" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M50 20V80" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M30 40H70" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M35 60H65" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="50" cy="50" r="5" fill="#d4af37"/>
+                </svg>
+            </template>
+            <template if:true={showText}>
+                <h2 class="brand-title">{brandName}</h2>
+            </template>
+        </div>
+    </template>
 </template>

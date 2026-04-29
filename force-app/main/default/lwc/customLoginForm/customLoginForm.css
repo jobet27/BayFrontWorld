@@ -1,0 +1,179 @@
+:host {
+    display: block;
+    width: 100%;
+    font-family: 'Inter', 'Outfit', sans-serif;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-card {
+    background: transparent;
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-header h2 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    color: #d4af37;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.login-header p {
+    color: #8a99ad;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    border-color: #d4af37;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+.form-label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8a99ad;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    background: #0a0e17;
+    padding: 0 5px;
+    color: #d4af37;
+    left: 12px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.8rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: #8a99ad;
+    cursor: pointer;
+}
+
+.remember-me input {
+    margin-right: 6px;
+    accent-color: #d4af37;
+}
+
+.forgot-link {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #f1c40f;
+}
+
+.login-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%);
+    color: #0a0e17;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.2);
+}
+
+.login-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.login-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #8a99ad;
+}
+
+.login-footer a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    color: #f1c40f;
+}
+
+.error-message {
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    color: #e74c3c;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(10, 14, 23, 0.3);
+    border-radius: 50%;
+    border-top-color: #0a0e17;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

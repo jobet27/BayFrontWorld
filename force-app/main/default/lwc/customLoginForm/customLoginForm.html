@@ -1,0 +1,49 @@
+<template>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Please enter your details to sign in.</p>
+            </div>
+            
+            <template if:true={errorMessage}>
+                <div class="error-message">
+                    {errorMessage}
+                </div>
+            </template>
+
+            <form onsubmit={handleLogin}>
+                <div class="input-group">
+                    <input type="text" id="username" required value={username} oninput={handleUsernameChange} class="form-input" placeholder=" " />
+                    <label for="username" class="form-label">Username</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" required value={password} oninput={handlePasswordChange} class="form-input" placeholder=" " />
+                    <label for="password" class="form-label">Password</label>
+                </div>
+
+                <div class="form-actions">
+                    <label class="remember-me">
+                        <input type="checkbox" checked={rememberMe} onchange={handleRememberMeChange} />
+                        <span>Remember me</span>
+                    </label>
+                    <a href={forgotPasswordUrl} class="forgot-link">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn" disabled={isLoading} aria-label="Sign In">
+                    <template if:false={isLoading}>
+                        <span>Sign In</span>
+                    </template>
+                    <template if:true={isLoading}>
+                        <span class="spinner"></span>
+                    </template>
+                </button>
+            </form>
+            
+            <div class="login-footer">
+                <p>Don't have an account? <a href={signupUrl} onclick={handleSignupClick}>Sign up</a></p>
+            </div>
+        </div>
+    </div>
+</template>
