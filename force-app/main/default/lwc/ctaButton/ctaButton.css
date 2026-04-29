@@ -1,0 +1,31 @@
+:host {
+    display: inline-block;
+}
+
+.btn-book {
+    background: linear-gradient(135deg, var(--accent-color, #d4af37) 0%, #b8972c 100%);
+    color: #0a0e17;
+    border: none;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition-smooth, 0.5s ease);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    background: linear-gradient(135deg, #e5c158 0%, var(--accent-color, #d4af37) 100%);
+}
+
+@media (max-width: 992px) {
+    .btn-book {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,52 @@
+<template>
+    <div class={menuClass} id="nav-menu">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="/" class="nav-link" onclick={handleHomeClick}>Home</a>
+            </li>
+            
+            <!-- Rooms & Suites Dropdown -->
+            <li class="nav-item dropdown" data-id="rooms">
+                <label for="rooms-btn" class="slds-assistive-text">Rooms & Suites</label>
+                <button id="rooms-btn" class="nav-link dropdown-toggle" aria-expanded="false" aria-label="Rooms & Suites" onclick={toggleDropdown}>
+                    Rooms & Suites
+                    <span class="chevron" aria-hidden="true"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="/rooms" onclick={handleLinkClick}>All Rooms</a></li>
+                    <li><a href="/suites" onclick={handleLinkClick}>Suites</a></li>
+                    <li><a href="/deluxe" onclick={handleLinkClick}>Deluxe Rooms</a></li>
+                    <li><a href="/villas" onclick={handleLinkClick}>Villas</a></li>
+                </ul>
+            </li>
+
+            <!-- Experiences Dropdown -->
+            <li class="nav-item dropdown" data-id="experiences">
+                <label for="exp-btn" class="slds-assistive-text">Experiences</label>
+                <button id="exp-btn" class="nav-link dropdown-toggle" aria-expanded="false" aria-label="Experiences" onclick={toggleDropdown}>
+                    Experiences
+                    <span class="chevron" aria-hidden="true"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="/spa" onclick={handleLinkClick}>Spa & Wellness</a></li>
+                    <li><a href="/dining" onclick={handleLinkClick}>Dining</a></li>
+                    <li><a href="/tours" onclick={handleLinkClick}>Tours</a></li>
+                    <li><a href="/activities" onclick={handleLinkClick}>Activities</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="/offers" class="nav-link" onclick={handleLinkClick}>Offers</a>
+            </li>
+            <li class="nav-item">
+                <a href="/about" class="nav-link" onclick={handleLinkClick}>About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="/gallery" class="nav-link" onclick={handleLinkClick}>Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a href="/contact" class="nav-link" onclick={handleLinkClick}>Contact</a>
+            </li>
+        </ul>
+    </div>
+</template>

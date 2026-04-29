@@ -1,0 +1,23 @@
+<template>
+    <nav class={navClass} aria-label="Main Navigation">
+        <div class="nav-container">
+            <!-- Brand Section -->
+            <c-navbar-brand brand-text={brandText} onhomeclick={handleHomeClick}></c-navbar-brand>
+
+            <!-- Navigation Links -->
+            <c-navlinks is-menu-open={isMenuOpen} onnavhome={handleHomeClick} onnavclick={handleLinkClick}></c-navlinks>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <c-cta-button button-text={bookNowText} onbuttonclick={handleBookNow}></c-cta-button>
+                
+                <!-- Hamburger Menu for Mobile -->
+                <button class={hamburgerClass} aria-label="Toggle Menu" onclick={toggleMobileMenu}>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+</template>
