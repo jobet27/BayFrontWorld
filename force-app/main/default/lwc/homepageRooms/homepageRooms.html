@@ -1,24 +1,26 @@
 <template>
-    <section class="rooms-section" id="rooms">
-        <div class="rooms-header">
-            <span class="subtitle">ACCOMMODATIONS</span>
-            <h2 class="title">Luxury Suites & Villas</h2>
-        </div>
-        
-        <div class="rooms-grid">
-            <template for:each={rooms} for:item="room">
-                <div class="room-card" key={room.id}>
-                    <div class="card-image-wrapper">
-                        <img src={room.image} alt={room.name} />
-                        <span class="room-price">{room.price} <span class="per-night">/ Night</span></span>
+    <template if:false={isHidden}>
+        <section class="rooms-section" id="rooms">
+            <div class="rooms-header">
+                <span class="subtitle">ACCOMMODATIONS</span>
+                <h2 class="title">Luxury Suites & Villas</h2>
+            </div>
+            
+            <div class="rooms-grid">
+                <template for:each={rooms} for:item="room">
+                    <div class="room-card" key={room.id}>
+                        <div class="card-image-wrapper">
+                            <img src={room.image} alt={room.name} />
+                            <span class="room-price">{room.price} <span class="per-night">/ Night</span></span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="room-name">{room.name}</h3>
+                            <p class="room-desc">{room.description}</p>
+                            <button class="btn-card" aria-label="Reserve luxury space">Reserve</button>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3 class="room-name">{room.name}</h3>
-                        <p class="room-desc">{room.description}</p>
-                        <button class="btn-card" aria-label="Reserve luxury space">Reserve</button>
-                    </div>
-                </div>
-            </template>
-        </div>
-    </section>
+                </template>
+            </div>
+        </section>
+    </template>
 </template>

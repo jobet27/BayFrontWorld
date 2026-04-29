@@ -1,7 +1,16 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, track } from 'lwc';
 import BAYFRONT_HERO from '@salesforce/resourceUrl/bayfront_hero';
 
 export default class HomepageExperiences extends LightningElement {
+    @track isHidden = false;
+
+    connectedCallback() {
+        if (window.location.pathname.includes('error') || 
+            window.location.pathname.includes('404') || 
+            window.location.pathname.includes('not-found')) {
+            this.isHidden = true;
+        }
+    }
     experiences = [
         {
             id: 1,

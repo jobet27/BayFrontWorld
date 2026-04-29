@@ -1,17 +1,19 @@
 <template>
-    <section class="about-section" id="about">
-        <div class="about-container">
-            <div class="about-content">
-                <span class="subtitle">{aboutSubtitle}</span>
-                <h2 class="title">{aboutTitle}</h2>
-                <p class="description">{aboutDescription}</p>
-                <button class="btn-secondary" aria-label="Learn More About Bayfront">Our Story</button>
-            </div>
-            <div class="about-visual">
-                <div class="image-wrapper">
-                    <img src={imageUrl} alt="Luxury Resort Amenities" />
+    <template if:false={isHidden}>
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <div class="about-content">
+                    <span class="subtitle">{aboutSubtitle}</span>
+                    <h2 class="title">{aboutTitle}</h2>
+                    <p class="description">{aboutDescription}</p>
+                    <button class="btn-secondary" aria-label="Learn More About Bayfront">Our Story</button>
+                </div>
+                <div class="about-visual">
+                    <div class="image-wrapper">
+                        <img src={imageUrl} alt="Luxury Resort Amenities" />
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </template>
 </template>

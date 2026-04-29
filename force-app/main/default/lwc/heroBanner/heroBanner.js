@@ -9,6 +9,15 @@ export default class HeroBanner extends LightningElement {
     @api bookingUrl = '/booking';
 
     @track error;
+    @track isHidden = false;
+
+    connectedCallback() {
+        if (window.location.pathname.includes('error') || 
+            window.location.pathname.includes('404') || 
+            window.location.pathname.includes('not-found')) {
+            this.isHidden = true;
+        }
+    }
 
     @wire(getHomepageHero)
     wiredHeroData({ error, data }) {

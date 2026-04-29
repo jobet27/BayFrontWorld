@@ -5,9 +5,15 @@ export default class Navbar extends LightningElement {
     @api bookNowText = 'Book Now';
     @api bookingUrl = '/booking';
     @track isScrolled = false;
+    @track isHidden = false;
     @track isMenuOpen = false;
 
     connectedCallback() {
+        if (window.location.pathname.includes('error') || 
+            window.location.pathname.includes('404') || 
+            window.location.pathname.includes('not-found')) {
+            this.isHidden = true;
+        }
         window.addEventListener('scroll', this.handleScroll);
     }
 
