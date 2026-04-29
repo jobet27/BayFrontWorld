@@ -1,8 +1,8 @@
 import { LightningElement, api } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 
-export default class CtaButton extends NavigationMixin(LightningElement) {
-    @api buttonText = 'Book Now';
+export default class HeroCTA extends NavigationMixin(LightningElement) {
+    @api buttonLabel = 'Book Now';
     @api url = '';
 
     handleClick() {
@@ -14,7 +14,8 @@ export default class CtaButton extends NavigationMixin(LightningElement) {
                 }
             });
         }
-        this.dispatchEvent(new CustomEvent('buttonclick', {
+        
+        this.dispatchEvent(new CustomEvent('ctaclick', {
             detail: { url: this.url }
         }));
     }

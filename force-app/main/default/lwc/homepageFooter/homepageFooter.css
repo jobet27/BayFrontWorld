@@ -1,0 +1,128 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.footer-section {
+    background-color: #05080f;
+    color: #ffffff;
+    font-family: 'Inter', 'Outfit', sans-serif;
+    padding: 80px 10% 30px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto 60px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-tagline {
+    color: #a0aab2;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.column-title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    color: #a0aab2;
+    font-size: 0.95rem;
+}
+
+.footer-links li a {
+    color: #a0aab2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #d4af37;
+}
+
+.newsletter-text {
+    color: #a0aab2;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    border-color: #d4af37;
+}
+
+.btn-subscribe {
+    background: #d4af37;
+    color: #0a0e17;
+    border: none;
+    padding: 0 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    background: #e5c158;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 30px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}

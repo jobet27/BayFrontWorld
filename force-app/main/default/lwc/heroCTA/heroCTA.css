@@ -1,0 +1,44 @@
+:host {
+    display: inline-block;
+}
+
+.cta-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+.btn-hero-cta {
+    background: linear-gradient(135deg, #d4af37 0%, #b8972c 100%);
+    color: #0a0e17;
+    border: none;
+    padding: 16px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-family: 'Inter', 'Outfit', sans-serif;
+    outline: none;
+    white-space: nowrap;
+}
+
+.btn-hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+    background: linear-gradient(135deg, #e5c158 0%, #d4af37 100%);
+}
+
+.btn-hero-cta:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 768px) {
+    .btn-hero-cta {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+}

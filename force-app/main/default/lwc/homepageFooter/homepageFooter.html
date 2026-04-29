@@ -1,0 +1,43 @@
+<template>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-brand-column">
+                <h2 class="footer-logo">{brandName}</h2>
+                <p class="footer-tagline">Excellence in luxury living.</p>
+            </div>
+            
+            <div class="footer-links-column">
+                <h4 class="column-title">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="/rooms">Accommodations</a></li>
+                    <li><a href="/spa">Wellness</a></li>
+                    <li><a href="/dining">Dining</a></li>
+                    <li><a href="/offers">Offers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-column">
+                <h4 class="column-title">Contact</h4>
+                <ul class="footer-links">
+                    <li>100 Bayfront Blvd, Marina</li>
+                    <li>stay@bayfrontview.com</li>
+                    <li>+1 (555) 019-2834</li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter-column">
+                <h4 class="column-title">Newsletter</h4>
+                <p class="newsletter-text">Subscribe to receive curated updates.</p>
+                <div class="newsletter-form">
+                    <label for="email-input" class="slds-assistive-text">Email Address</label>
+                    <input id="email-input" type="email" placeholder="Email Address" aria-label="Email Address" />
+                    <button type="button" class="btn-subscribe">Join</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {currentYear} {brandName}. All rights reserved.</p>
+        </div>
+    </footer>
+</template>

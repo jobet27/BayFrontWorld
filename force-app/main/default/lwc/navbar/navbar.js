@@ -3,6 +3,7 @@ import { LightningElement, track, api } from 'lwc';
 export default class Navbar extends LightningElement {
     @api brandText = 'BayFront Hotel & Resorts';
     @api bookNowText = 'Book Now';
+    @api bookingUrl = '/booking';
     @track isScrolled = false;
     @track isMenuOpen = false;
 

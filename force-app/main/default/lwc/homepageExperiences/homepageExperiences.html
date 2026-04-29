@@ -1,0 +1,22 @@
+<template>
+    <section class="exp-section" id="experiences">
+        <div class="exp-header">
+            <span class="subtitle">UNFORGETTABLE MOMENTS</span>
+            <h2 class="title">Curated Experiences</h2>
+        </div>
+
+        <div class="exp-grid">
+            <template for:each={experiences} for:item="exp">
+                <div class="exp-card" key={exp.id}>
+                    <img src={exp.image} alt={exp.title} class="exp-bg" />
+                    <div class="exp-overlay"></div>
+                    <div class="exp-content">
+                        <span class="exp-category">{exp.category}</span>
+                        <h3 class="exp-title">{exp.title}</h3>
+                        <span class="exp-link" aria-hidden="true">Explore →</span>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+</template>
